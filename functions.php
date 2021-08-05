@@ -33,5 +33,25 @@ function template_files(){
     wp_enqueue_style( 'time-picker' );
     wp_enqueue_style( 'main' );
     wp_enqueue_style( 'responsive' );
+
+
+    // Including JQuery Files
+    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'popper', get_template_directory_uri() . '/styles/bootstrap-4.1.2/popper.js', array('jquery'), true );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/styles/bootstrap-4.1.2/bootstrap.min.js', array('jquery'), true );
+    wp_enqueue_script( 'twin-max', get_template_directory_uri() . '/plugins/greensock/TweenMax.min.js', array('jquery'), true );
+    wp_enqueue_script( 'timeline-max', get_template_directory_uri() . '/plugins/greensock/TimelineMax.min.js', array('jquery'), true );
+    wp_enqueue_script( 'scroll-magic', get_template_directory_uri() . '/plugins/scrollmagic/ScrollMagic.min.js', array('jquery'), true );
+    wp_enqueue_script( 'animation', get_template_directory_uri() . '/plugins/greensock/animation.gsap.min.js', array('jquery'), true );
+    wp_enqueue_script( 'scroll-to', get_template_directory_uri() . '/plugins/greensock/ScrollToPlugin.min.js', array('jquery'), true );
+    wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/plugins/OwlCarousel2-2.2.1/owl.carousel.js', array('jquery'), true );
+    wp_enqueue_script( 'easing', get_template_directory_uri() . '/plugins/easing/easing.js', array('jquery'), true );
+    wp_enqueue_script( 'parallax', get_template_directory_uri() . '/plugins/parallax-js-master/parallax.min.js', array('jquery'), true );
+    wp_enqueue_script( 'colorbox', get_template_directory_uri() . '/plugins/colorbox/jquery.colorbox-min.js', array('jquery'), true );
+    wp_enqueue_script( 'date-picker', get_template_directory_uri() . '/plugins/jquery-datepicker/jquery-ui.js', array('jquery'), true );
+    wp_enqueue_script( 'time-picker', get_template_directory_uri() . '/plugins/jquery-timepicker/jquery.timepicker.js', array('jquery'), true );
+    wp_enqueue_script( 'main', get_template_directory_uri() . '/js/custom.js', array('jquery'), true );
+    
+
 }
 add_action('wp_enqueue_scripts', 'template_files');
