@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: Welcome Template
+*/
 get_header(); ?>
 	<!-- Home -->
 

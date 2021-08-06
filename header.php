@@ -26,17 +26,24 @@
 								<div>restaurant</div>
 							</a>
 						</div>
-						<nav class="main_nav">
-							<ul class="d-flex flex-row align-items-center justify-content-start">
-								<li><a href="index.html">home</a></li>
-								<li><a href="about.html">about us</a></li>
-								<li><a href="menu.html">menu</a></li>
-								<li><a href="#">delivery</a></li>
-								<li><a href="blog.html">blog</a></li>
-								<li><a href="contact.html">contact</a></li>
-							</ul>
+						<nav class="main_nav" aria-label="<?php esc_attr_e( 'Main Menu', 'venue' ); ?>">
+
+						
+							
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'main_menu',
+										'menu_class'     => 'd-flex flex-row align-items-center justify-content-start',
+										'depth'          => 1,
+										'fallback_cb'    => 'venue_default_main_menu'
+									)
+								);
+							?>
+
+						
 						</nav>
-						<div class="reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
+						<div class="reservations_phone ml-auto">Reservations: +8801616346835</div>
 					</div>
 				</div>
 			</div>
@@ -64,15 +71,18 @@
 
 	<div class="menu trans_800">
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-			<ul>
-				<li><a href="index.html">home</a></li>
-				<li><a href="about.html">about us</a></li>
-				<li><a href="menu.html">menu</a></li>
-				<li><a href="#">delivery</a></li>
-				<li><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">contact</a></li>
-			</ul>
+		
+		<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'main_menu',
+										'menu_class'     => '',
+										'depth'          => 1,
+										'fallback_cb'    => 'venue_default_main_menu'
+									)
+								);
+							?>
 		</div>
-		<div class="menu_reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
+		<div class="menu_reservations_phone ml-auto">Reservations: +88 01616346835</div>
 	</div>
 	
